@@ -17,12 +17,30 @@ struct Currency {
 
 class CurrenciesListViewModel {
     
-    var updateHandler: (() -> Void)?
+    typealias CurrencyList = [Currency]
     
-    var currencies = [Currency]()
+    var currencies = CurrencyList()
     
-    func reload(completion: ((Result<[Currency]>) -> Void)? = nil) {
+    var didUpdateHandler: ((Error?) -> Void)?
+    
+    private let dataSource: CurrenciesListDataSource
+    
+    init(dataSource: CurrenciesListDataSource) {
+        self.dataSource = dataSource
         
+        reload()
+    }
+    
+    func reload(completion: ((Result<CurrencyList>) -> Void)? = nil) {
+        dataSource.load { [weak self] result in
+            switch result {
+            case .success(let value):
+                self?.currencies = value
+                self?.didUpdateHandler?(nil)
+            case .failure(let error):
+                self?.didUpdateHandler?(error)
+            }
+        }
     }
     
 }

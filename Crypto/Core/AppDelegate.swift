@@ -12,10 +12,30 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var applicationRouter: ApplicationRouter?
+    var rootVC = UINavigationController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        setupWindow()
+        startApplicationFlow()
+        
         return true
     }
+    
+    fileprivate func setupWindow() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = .white
+        window?.rootViewController = rootVC
+        window?.makeKeyAndVisible()
+    }
 
+    fileprivate func startApplicationFlow() {
+        let applicationRouter = ApplicationRouter(withNavigationController: rootVC)
+        applicationRouter.startAppFlow()
+        self.applicationRouter = applicationRouter
+    }
+
+    
 }
 

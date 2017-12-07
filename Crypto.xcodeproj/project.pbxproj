@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55675F091FD9D9D1004D4009 /* CurrenciesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55675F081FD9D9D1004D4009 /* CurrenciesListViewController.xib */; };
 		559A45C41FD877F7003EF5E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A45C31FD877F7003EF5E9 /* AppDelegate.swift */; };
 		559A45C61FD877F7003EF5E9 /* CurrenciesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A45C51FD877F7003EF5E9 /* CurrenciesListViewController.swift */; };
 		559A45C91FD877F7003EF5E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559A45C71FD877F7003EF5E9 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		559A45ED1FD9CD5D003EF5E9 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A45EB1FD9CD5D003EF5E9 /* CurrencyCell.swift */; };
 		559A45EE1FD9CD5D003EF5E9 /* CurrencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 559A45EC1FD9CD5D003EF5E9 /* CurrencyCell.xib */; };
 		559A45F21FD9CE47003EF5E9 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A45F11FD9CE47003EF5E9 /* Reusable.swift */; };
+		559A45F61FD9D62F003EF5E9 /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A45F51FD9D62F003EF5E9 /* ApplicationRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55675F081FD9D9D1004D4009 /* CurrenciesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrenciesListViewController.xib; sourceTree = "<group>"; };
 		559A45C01FD877F7003EF5E9 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		559A45C31FD877F7003EF5E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		559A45C51FD877F7003EF5E9 /* CurrenciesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesListViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		559A45EB1FD9CD5D003EF5E9 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		559A45EC1FD9CD5D003EF5E9 /* CurrencyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyCell.xib; sourceTree = "<group>"; };
 		559A45F11FD9CE47003EF5E9 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		559A45F51FD9D62F003EF5E9 /* ApplicationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 			children = (
 				559A45EA1FD9CD3A003EF5E9 /* Cell */,
 				559A45C51FD877F7003EF5E9 /* CurrenciesListViewController.swift */,
+				55675F081FD9D9D1004D4009 /* CurrenciesListViewController.xib */,
 				559A45E31FD87D8C003EF5E9 /* CurrenciesListViewModel.swift */,
 				559A45E71FD87E59003EF5E9 /* CurrenciesDataSource.swift */,
 			);
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				559A45C31FD877F7003EF5E9 /* AppDelegate.swift */,
+				559A45F51FD9D62F003EF5E9 /* ApplicationRouter.swift */,
 				559A45E51FD87DD5003EF5E9 /* Result.swift */,
 				559A45F01FD9CE31003EF5E9 /* UI */,
 			);
@@ -247,6 +253,7 @@
 			files = (
 				559A45EE1FD9CD5D003EF5E9 /* CurrencyCell.xib in Resources */,
 				559A45CE1FD877F7003EF5E9 /* LaunchScreen.storyboard in Resources */,
+				55675F091FD9D9D1004D4009 /* CurrenciesListViewController.xib in Resources */,
 				559A45CB1FD877F7003EF5E9 /* Assets.xcassets in Resources */,
 				559A45C91FD877F7003EF5E9 /* Main.storyboard in Resources */,
 			);
@@ -273,6 +280,7 @@
 				559A45E61FD87DD5003EF5E9 /* Result.swift in Sources */,
 				559A45E41FD87D8C003EF5E9 /* CurrenciesListViewModel.swift in Sources */,
 				559A45F21FD9CE47003EF5E9 /* Reusable.swift in Sources */,
+				559A45F61FD9D62F003EF5E9 /* ApplicationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S83969LQZ9;
-				INFOPLIST_FILE = Crypto/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Crypto/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Andrey-Mamchenko.Crypto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,7 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S83969LQZ9;
-				INFOPLIST_FILE = Crypto/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Crypto/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Andrey-Mamchenko.Crypto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
